@@ -1,22 +1,19 @@
-# Android fstab file.
-# The filesystem that contains the filesystem checker binary (typically /system) cannot
-# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+/boot           emmc	/dev/block/platform/13500000.dwmmc0/by-name/boot    	flags=backup=1;display="Boot"
+/cache  		ext4	/dev/block/platform/13500000.dwmmc0/by-name/cache   	flags=backup=1;display="Cache"
+/data   		ext4	/dev/block/platform/13500000.dwmmc0/by-name/userdata	flags=length=-20480,encryptable=footer
+/recovery       emmc	/dev/block/platform/13500000.dwmmc0/by-name/recovery	flags=backup=1;display="Recovery"
+/efs    		ext4	/dev/block/platform/13500000.dwmmc0/by-name/efs 		flags=backup=1;display="EFS"
+/dtb		    emmc	/dev/block/platform/13500000.dwmmc0/by-name/dtb		    flags=backup=0;flashimg;display="Dt Image"
+/dtbo		    emmc	/dev/block/platform/13500000.dwmmc0/by-name/dtbo	    flags=backup=0;flashimg;display="Dtbo Image"
+/modem  		emmc	/dev/block/platform/13500000.dwmmc0/by-name/radio   	flags=backup=1;display="Modem"
+/misc   		emmc	/dev/block/platform/13500000.dwmmc0/by-name/misc    	flags=backup=1;display="Misc"
+/param  		emmc	/dev/block/platform/13500000.dwmmc0/by-name/param   	flags=backup=1;display="Param"
+/product  	    ext4	/dev/block/platform/13500000.dwmmc0/by-name/product 	flags=backup=1;wipeingui;display="Product"
+/system_root	ext4	/dev/block/platform/13500000.dwmmc0/by-name/system  	flags=backup=1;wipeingui;display="System"
+/vendor 		ext4	/dev/block/platform/13500000.dwmmc0/by-name/vendor  	flags=backup=1;wipeingui;display="Vendor"
+/product_image	emmc	/dev/block/platform/13500000.dwmmc0/by-name/product 	flags=backup=0;flashimg;display="Product Image (CSC)"
+/system_image	emmc	/dev/block/platform/13500000.dwmmc0/by-name/system  	flags=backup=0;flashimg;display="System Image
+/vendor_image	emmc	/dev/block/platform/13500000.dwmmc0/by-name/vendor  	flags=backup=0;flashimg;display="Vendor Image"
 
-# Mount point               FS         Device                                                                Flags
-/boot                        emmc      /dev/block/platform/13500000.dwmmc0/by-name/boot
-/recovery                    emmc     /dev/block/platform/13500000.dwmmc0/by-name/recovery        flags=display="Recovery";flashimg=1;backup=1
-/cache                       ext4       /dev/block/platform/13500000.dwmmc0/by-name/cache
-/system_root                ext4       /dev/block/platform/13500000.dwmmc0/by-name/system         flags=display=System
-/vendor                      ext4       /dev/block/platform/13500000.dwmmc0/by-name/vendor         flags=display=Vendor;backup=1;wipeingui 
-/system_image              emmc    /dev/block/platform/13500000.dwmmc0/by-name/system         flags=backup=1;flashimg=1
-/vendor_image              emmc    /dev/block/platform/13500000.dwmmc0/by-name/vendor          flags=backup=1;flashimg=1
-/data                        ext4      /dev/block/platform/13500000.dwmmc0/by-name/userdata        flags=display="Data";encryptable=footer;length=-20480
-/dtbo                        emmc    /dev/block/platform/13500000.dwmmc0/by-name/dtbo
-/vbmeta                     emmc    /dev/block/platform/13500000.dwmmc0/by-name/vbmeta          flags=display="Vbmeta";flashimg=1;backup=1
-/efs                         emmc    /dev/block/platform/13500000.dwmmc0/bg-name/efs               flags=backup=1;display="EFS"
-/product                    ext4      /dev/block/platform/13500000.dwmmc0/by-name/product          flags=backup=0;display="Product"
-/product_image            emmc    /dev/block/platform/13500000.dwmmc0/by-name/product          flags=backup=1;flashimg;display="Product Image"
-
-# External storage
-/sdcard1               vfat    /dev/block/mmcblk1p1 /dev/block/mmcblk1                           flags=fsflags=utf8;display="Micro SDcard";storage;wipeingui;removable
-/usb-otg        vfat    /dev/block/sdf1       /dev/block/sdf                    flags=display="USB-Storage";storage;wipeingui;removable
+/external_sd	vfat	/dev/block/mmcblk1p1      /dev/block/mmcblk1			flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg    	vfat	/dev/block/sda1           /dev/block/sda				flags=display="USB-OTG";storage;wipeingui;removable
