@@ -32,8 +32,6 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Board/Kernel Flags
-ENABLE_CPUSETS := true
-ENABLE_SCHEDBOOST := true
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
@@ -47,7 +45,7 @@ TARGET_USES_UEFI := true
 
 # Kernel Image
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
-BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos7884B androidboot.selinux=ermissive skip_override androidboot.fastboot=1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos7884B androidboot.selinux=permissive skip_override androidboot.fastboot=1
 # End
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -93,16 +91,16 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Hack: Prevent Anti-Rollback
+PLATFORM_SECURITY_PATCH := 2020-10-01
+PLATFORM_VERSION := 10
+
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
-TW_SCREEN_BLANK_ON_BOOT := true
 TW_USE_TOOLBOX := true
-RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
-TW_MAX_BRIGHTNESS := 25500
-TW_DEFAULT_BRIGHTNESS := 12800
 TW_HAS_DOWNLOAD_MODE := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_INCLUDE_NTFS_3G := true
