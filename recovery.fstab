@@ -17,7 +17,7 @@
 
 # Cache and ETC Points
 /cache              ext4    /dev/block/platform/13500000.dwmmc0/by-name/cache         flags=display="Cache";backup=1;wipeingui
-/data               ext4    /dev/block/platform/13500000.dwmmc0/by-name/userdata      flags=display="Data";encryptable=footer;length=-20480
+/data               ext4    /dev/block/platform/13500000.dwmmc0/by-name/userdata      flags=display="Data";encryptable=footer;length=-20480;fileencryption=ice
 /efs                ext4    /dev/block/platform/13500000.dwmmc0/by-name/efs           flags=display="EFS";backup=1
 
 # SDC and OTG Points

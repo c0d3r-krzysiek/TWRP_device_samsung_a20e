@@ -73,8 +73,7 @@ TARGET_BOARD_PLATFORM := exynos7884B
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
 TARGET_HW_DISK_ENCRYPTION := true
 TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_FBE := true
-TW_INCLUDE_CRYPTO_FBE := true
+# TW_INCLUDE_FBE := true
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4320133120
@@ -94,6 +93,10 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Hack: Prevent Anti-Rollback
 PLATFORM_SECURITY_PATCH := 2020-10-01
 PLATFORM_VERSION := 10
+
+# Debug flags
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
