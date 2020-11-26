@@ -1,6 +1,6 @@
 /boot           emmc	/dev/block/platform/13500000.dwmmc0/by-name/boot    	flags=backup=1;display="Boot"
 /cache  		ext4	/dev/block/platform/13500000.dwmmc0/by-name/cache   	flags=backup=1;display="Cache"
-/data   		ext4	/dev/block/platform/13500000.dwmmc0/by-name/userdata	flags=encryptable=footer
+/data   		ext4	/dev/block/platform/13500000.dwmmc0/by-name/userdata
 /recovery       emmc	/dev/block/platform/13500000.dwmmc0/by-name/recovery	flags=backup=1;display="Recovery"
 /efs    		ext4	/dev/block/platform/13500000.dwmmc0/by-name/efs 		flags=backup=1;display="EFS"
 /dtb		    emmc	/dev/block/platform/13500000.dwmmc0/by-name/dtb		    flags=backup=0;flashimg;display="Dt Image"
