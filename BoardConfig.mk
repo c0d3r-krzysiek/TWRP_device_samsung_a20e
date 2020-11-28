@@ -59,6 +59,7 @@ TW_INCLUDE_FBE := true
 TW_Y_OFFSET := 80
 TW_H_OFFSET := -80
 TW_USE_TOOLBOX := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # Logging
 #TARGET_USES_LOGD := true
