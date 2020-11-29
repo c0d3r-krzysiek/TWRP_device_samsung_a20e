@@ -15,10 +15,8 @@
 # limitations under the License.
 #
 
-# Specify phone tech before including full_phone
-$(call inherit-product, vendor/omni/config/gsm.mk)
-
 # Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/gsm.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 # Not available in android-10.0+ source
 # $(call inherit-product, build/target/product/embedded.mk)
