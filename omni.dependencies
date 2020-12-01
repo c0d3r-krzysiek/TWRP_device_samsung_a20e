@@ -1,6 +1,6 @@
 [{
     "remote": "github",
-    "repository": "roynatech2544/physwizz_A20e_kernel",
+    "repository": "roynatech2544/android_kernel_samsung_a20e",
     "revision": "android-10.0",
     "target_path": "kernel/samsung/a20e"
   }]
