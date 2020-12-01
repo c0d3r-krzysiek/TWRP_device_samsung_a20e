@@ -8,7 +8,7 @@ do_build() {
   
   lunch omni_a20e-eng
   
-  mka recoveryimage -j`nproc`
+  make recoveryimage -j`nproc`
 }
 
 # --- main --- #
