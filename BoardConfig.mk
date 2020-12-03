@@ -17,7 +17,7 @@ TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
 # Kernel (Using Prebuilt)
-TARGET_PREBUILT_KERNEL := device/samsung/a20e/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/samsung/a20e/prebuilt/Image
 
 # Kernel Options
 TARGET_KERNEL_ARCH := arm64
