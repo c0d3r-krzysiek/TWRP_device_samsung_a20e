@@ -20,7 +20,6 @@ TARGET_USES_64_BIT_BINDER := true
 TARGET_PREBUILT_KERNEL := device/samsung/a20e/prebuilt/kernel
 
 # Kernel Options
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive enforcing=0 buildvariant=eng
 TARGET_KERNEL_ARCH := arm64
 BOARD_KERNEL_IMAGE_NAME := Image
 
