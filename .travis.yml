@@ -42,11 +42,11 @@ jobs:
       - stage: Get_Files
         script: . get_files.sh
         workspaces:
-        create:
-          name: files
-          paths:
-            - $HOME/TWRP
+           create:
+             name: files
+             paths:
+                - $HOME/TWRP
       - stage: Build
         workspaces:
-        use: files
+           use: files
         script: . build_ci.sh
