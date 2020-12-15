@@ -41,8 +41,12 @@ jobs:
     include: 
       - stage: Get_Files
         script: . get_files.sh
-        cache:
-          directories:
+        workspaces:
+        create:
+          name: files
+          paths:
             - $HOME/TWRP
       - stage: Build
+        workspaces:
+        use: files
         script: . build_ci.sh
